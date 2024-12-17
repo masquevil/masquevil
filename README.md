@@ -2,7 +2,10 @@
 
 一些我还在维护的项目：
 
-- TRPG - COC7版车卡工具：https://masquevil.github.io/trpg-saikou/#/coc-card
+- TRPG 赛高：https://masquevil.github.io/trpg-saikou/
+  - COC7版车卡工具：https://masquevil.github.io/trpg-saikou/#/coc-card
+  - 倒计时播报：https://masquevil.github.io/trpg-saikou/#/timer
+  - Roll 点工具：https://masquevil.github.io/trpg-saikou/#/roll
 
 <!--
 **masquevil/masquevil** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
