@@ -8,5 +8,12 @@ declare module 'marked' {
       raw: string;
       text: string;
     }
+
+    interface ValidityTag {
+      type: 'validity-tag';
+      raw: string;
+      year: string;
+      month: string;
+    }
   }
 }

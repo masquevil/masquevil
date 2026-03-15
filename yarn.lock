@@ -2034,6 +2034,11 @@ magic-string@^0.30.19, magic-string@^0.30.21:
   dependencies:
     "@jridgewell/sourcemap-codec" "^1.5.5"
 
+marked-base-url@^1.1.8:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/marked-base-url/-/marked-base-url-1.1.8.tgz#de009a6781ea99325571c38a28925a3da73a376d"
+  integrity sha512-RA80m/VTq82jAnpusyK7B4M45TZ3LMB1ymrdAJI3oaSG4+8MzBc8FFlVKIAhkBrfRM7CxeTHTGUVVK59/eiQyA==
+
 marked@*, marked@^17.0.2:
   version "17.0.4"
   resolved "https://registry.yarnpkg.com/marked/-/marked-17.0.4.tgz#38293b06b0605db39107803f3398938bbbed1b28"

@@ -1,4 +1,6 @@
 import { Marked } from 'marked';
+import { baseUrl } from 'marked-base-url';
+import createValidityTagExtension from './validity-tag-extension';
 
 const marked = new Marked({
   breaks: true,
@@ -7,6 +9,12 @@ const marked = new Marked({
 });
 
 // common extensions
+marked.use(baseUrl(import.meta.env.BASE_URL));
+
+// custom extensions
+marked.use(createValidityTagExtension());
+
+// basic renderers
 marked.use({
   renderer: {
     heading({ tokens, depth }) {
@@ -37,15 +45,7 @@ marked.use({
   },
 });
 
-let initialized = false;
-
 export default function useMdParser() {
-  if (!initialized) {
-    initialized = true;
-    // extensions
-    // marked.use(...);
-  }
-
   return {
     parse: (content: string) => marked.parse(content) as string,
   };

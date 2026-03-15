@@ -102,3 +102,17 @@ const html = computed(() => parse(props.content));
   }
 }
 </style>
+
+<style lang="scss">
+.md-validity-tag {
+  display: block;
+  margin: -8px auto;
+  padding: 4px 12px;
+  width: fit-content;
+  color: #9286ab;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1;
+}
+</style>

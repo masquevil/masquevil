@@ -29,6 +29,7 @@
     "@vueuse/core": "^10.9.0",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.23.0",
+    "marked-base-url": "^1.1.8",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.2.5",
     "qs": "^6.12.0",
