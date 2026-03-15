@@ -1,4 +1,4 @@
-# 侠小然的简历
+var e=`# 侠小然的简历
 
 ## 🌟 基本信息
 
@@ -27,3 +27,4 @@
 - 家用服务器：Nginx
 - 3D 打印
 - AI 生图：Stable Diffusion
+`;export{e as default};
