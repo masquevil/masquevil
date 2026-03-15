@@ -1,0 +1,75 @@
+@use './base.scss';
+
+::placeholder {
+  color: var(--color-placeholder);
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-black);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, Microsoft Yahei, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input[type=text], input[type=checkbox], button, th, td {
+  appearance: none;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.link {
+  color: var(--color-link);
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--color-link-hover);
+  }
+  &:active {
+    color: var(--color-link-active);
+  }
+}
+
+.rel {
+  position: relative;
+}
+
+.row {
+  display: flex;
+}
+.row-vertical {
+  display: flex;
+  flex-direction: column;
+}
+.col-0 {
+  flex: 1;
+}
+.col-1 {
+  flex: 1 0 0;
+}
+.col-2 {
+  flex: 2 0 0;
+}
+.col-3 {
+  flex: 3 0 0;
+}
+.col-4 {
+  flex: 4 0 0;
+}

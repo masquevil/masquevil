@@ -1,0 +1,28 @@
+:root {
+  // my custom
+  --color-white: #fff;
+  --color-black: #2e2e2e;
+
+  --color-link: hsl(240, 100%, 75%);
+  --color-link-hover: hsl(240, 50%, 60%);
+  --color-link-active: hsl(240, 30%, 40%);
+  --color-placeholder: #b2b2b2;
+
+  --color-heading: #fff;
+  --color-text: #f5f5f5;
+  --color-border: #8a8a8a;
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+b {
+  font-weight: bold;
+}
