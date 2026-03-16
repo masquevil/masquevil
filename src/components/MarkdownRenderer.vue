@@ -36,7 +36,7 @@ const html = computed(() => parse(props.content));
   :deep(.md-h1) {
     color: var(--color-title);
     margin: 20px 0;
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 600;
     text-align: center;
   }
@@ -44,7 +44,7 @@ const html = computed(() => parse(props.content));
   :deep(.md-h2) {
     color: var(--color-title);
     margin: 20px 0;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
   }
 
@@ -65,7 +65,6 @@ const html = computed(() => parse(props.content));
   :deep(.md-p) {
     font-size: 16px;
     margin-bottom: 12px;
-    // text-indent: 1.4em;
     line-height: 1.6;
   }
 

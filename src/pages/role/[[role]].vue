@@ -1,30 +1,38 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 
 import MarkdownRenderer from '@/components/MarkdownRenderer.vue';
 import { getDocByName } from '@/utils';
+import doc404 from '@/docs/404.md';
 
 const route = useRoute<'/role/[[role]]'>();
 
+const inited = ref(false);
 const doc = ref<string | null>(null);
-const doc404 = ref('');
 
-onMounted(async () => {
-  const [docContent, doc404Content] = await Promise.all([
-    getDocByName(route.params.role ?? '404'),
-    getDocByName('404'),
-  ]);
-  doc.value = docContent;
-  doc404.value = doc404Content ?? '';
-});
+watch(
+  () => route.params.role,
+  async (newRole) => {
+    if (!newRole) return;
+    doc.value = await getDocByName(newRole);
+    inited.value = true;
+  },
+  { immediate: true },
+);
 </script>
 
 <template>
   <main class="page">
     <div class="container">
+      <div
+        v-if="!inited"
+        class="loading"
+      >
+        <div class="loading-spinner">正在寻找侠小然...</div>
+      </div>
       <MarkdownRenderer
-        v-if="doc"
+        v-else-if="doc"
         :content="doc"
       />
       <MarkdownRenderer
@@ -41,5 +49,38 @@ onMounted(async () => {
   max-width: 600px;
   margin: 0 auto;
   padding: 36px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.loading-spinner {
+  font-size: 20px;
+  background: repeating-linear-gradient(
+    135deg,
+    hsl(240, 100%, 90%) 0%,
+    hsl(240, 50%, 70%) 15%,
+    hsl(240, 60%, 60%) 65%,
+    hsl(240, 100%, 90%) 80%,
+    hsl(240, 100%, 90%) 100%
+  );
+  color: transparent;
+  background-clip: text;
+  background-repeat: repeat;
+  background-size: 200% 100%;
+  animation: gradient-flow 1.5s linear infinite;
+}
+
+@keyframes gradient-flow {
+  0% {
+    background-position: 200% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
 </style>

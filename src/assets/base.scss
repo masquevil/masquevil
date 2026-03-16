@@ -1,5 +1,5 @@
 :root {
-  // my custom
+  // my custom color
   --color-white: #fff;
   --color-black: #2e2e2e;
 
@@ -10,9 +10,15 @@
 
   --color-heading: #fff;
   --color-text: #f5f5f5;
+  --color-secondary-text: #8a8a8a;
   --color-border: #8a8a8a;
 
   color-scheme: dark;
+
+  /*** root level shared variables ***/
+  // header
+  --root-header-height: 60px;
+  --root-header-color-bg: rgba(12, 8, 12, 0.9);
 }
 
 *,
